@@ -46,9 +46,9 @@
             android:text="TextView"
             android:textColor="#21CA1B"
             app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv3"
-            app:layout_constraintEnd_toEndOf="@+id/energy_used_tv"
+            app:layout_constraintEnd_toEndOf="@+id/power_tv"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/energy_used_tv"
+            app:layout_constraintStart_toStartOf="@+id/power_tv"
             app:layout_constraintTop_toTopOf="@+id/time_passed_tv3" />
 
         <TextView
@@ -59,13 +59,13 @@
             android:text="TextView"
             android:textColor="#21CA1B"
             app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv5"
-            app:layout_constraintEnd_toEndOf="@+id/energy_used_tv"
+            app:layout_constraintEnd_toEndOf="@+id/power_tv"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/energy_used_tv"
+            app:layout_constraintStart_toStartOf="@+id/power_tv"
             app:layout_constraintTop_toTopOf="@+id/time_passed_tv5" />
 
         <TextView
-            android:id="@+id/energy_used_tv"
+            android:id="@+id/power_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -185,7 +185,7 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:max="240"
+                    android:max="280"
                     android:progress="50"
                     android:progressDrawable="@drawable/circular_bar"
                     android:rotation="120"
@@ -202,7 +202,8 @@
                     android:layout_height="125dp"
                     android:gravity="center"
                     android:text="TextView"
-                    android:textColor="#21CA1B" />
+                    android:textColor="#21CA1B"
+                    android:textSize="18sp" />
             </FrameLayout>
 
             <TextView
@@ -241,8 +242,8 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:max="50"
-                    android:progress="5"
+                    android:max="5"
+                    android:progress="2"
                     android:progressDrawable="@drawable/circular_bar"
                     android:rotation="120"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -256,7 +257,8 @@
                     android:layout_height="125dp"
                     android:gravity="center"
                     android:text="TextView"
-                    android:textColor="#21CA1B" />
+                    android:textColor="#21CA1B"
+                    android:textSize="18sp" />
             </FrameLayout>
 
             <TextView

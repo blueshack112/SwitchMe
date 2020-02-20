@@ -15,7 +15,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String URL = "http://192.168.18.4/SwitchMe";
+    // Change the IP ADDRESS HERE!!! Set it to Macbook's IP Address
+    public static final String URL = "http://192.168.0.103/SwitchMe";
     private EditText etUsername;
     private EditText etPassword;
     private Button   btnSubmit;

@@ -5,7 +5,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,10 @@ public class HomeActivity extends AppCompatActivity {
     private TextView     tvTimePassed;
     private ListUpdater  updateList;
     private Calendar     calendar;
+    private ProgressBar voltsBar;
+    private ProgressBar ampsBar;
+    private TextView voltsText, ampsText, powerUsed, amountGenerated, unitsConsumed;
+    private int relayID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +46,16 @@ public class HomeActivity extends AppCompatActivity {
 
         tbSwitch = findViewById(R.id.switcher_tb);
         tvTimePassed = findViewById(R.id.time_passed_tv);
+        voltsBar = findViewById(R.id.volt_progress);
+        ampsBar = findViewById(R.id.amp_progress);
+        voltsText = findViewById(R.id.volt_units_tv);
+        ampsText = findViewById(R.id.amp_units_tv);
+        powerUsed = findViewById(R.id.power_tv);
+        unitsConsumed = findViewById(R.id.units_consumed_tv);
+        amountGenerated = findViewById(R.id.amount_generated_tv);
 
         context = this;
+        relayID = 1; // Change this to adopt based on relay...
 
         // Execute Thread
         // Thread to keep updating the list
@@ -54,11 +68,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String url = MainActivity.URL + "/switchState.php";
+
                 Response.Listener listener = new Response.Listener() {
                     @Override
                     public void onResponse(Object response) {
                         try {
                             //JSONObject authResponse = new JSONObject(response.toString());
+                            Log.d("CHECKRESPONSE", "onClick: " + response.toString());
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -86,6 +102,7 @@ public class HomeActivity extends AppCompatActivity {
                         Map<String, String> param = new HashMap<>();
                         //Put user ID and password in data set
                         Calendar t = Calendar.getInstance();
+                        param.put("id", Integer.toString(relayID));
                         param.put("state", finalNewCheckedState);
                         param.put("time", "" + t.get(Calendar.YEAR) + "-" + t.get(Calendar.MONTH) + "-" + t.get(Calendar.DATE) + " " + t.get(Calendar.HOUR) + ":" + t.get(Calendar.MINUTE) + ":" + t.get(Calendar.SECOND));
                         return param;
@@ -136,7 +153,6 @@ public class HomeActivity extends AppCompatActivity {
 
             // The infinite loop that will keep running and check for updates
             while (infinite) {
-
                 String url = MainActivity.URL + "/getState.php";
                 Response.Listener listener = new Response.Listener() {
                     @Override
@@ -150,6 +166,15 @@ public class HomeActivity extends AppCompatActivity {
                             if (state.equals("OFF")) {
                                 updateTimePassed("Switch is OFF.");
                                 switchTB(false);
+
+                                // Update States
+                                voltsBar.setProgress(0);
+                                voltsText.setText(0 + "V");
+                                ampsBar.setProgress(0);
+                                ampsText.setText(0 + " A");
+                                powerUsed.setText(0 + " Watts");
+                                unitsConsumed.setText(0 + " KWh");
+                                amountGenerated.setText(0.00 + " Rs.");
                             } else {
                                 switchTB(true);
                                 long diff = Calendar.getInstance().getTime().getTime() - Math.abs(updated.getTime());
@@ -159,6 +184,22 @@ public class HomeActivity extends AppCompatActivity {
                                         calendar.get(Calendar.HOUR)) + " Hours | " + calendar.get(Calendar.MINUTE) + " Minutes | " +
                                         calendar.get(Calendar.SECOND) + " Seconds";
                                 updateTimePassed(message);
+
+                                // Add code for the next variables
+                                double volts = jsonresponse.getDouble("volts");
+                                double amps = jsonresponse.getDouble("amps");
+                                double power = jsonresponse.getDouble("power");
+                                double energy = jsonresponse.getDouble("energy");
+                                double cost = jsonresponse.getDouble("cost");
+
+                                // Update States
+                                voltsBar.setProgress((int)volts);
+                                voltsText.setText(volts + "V");
+                                ampsBar.setProgress((int)amps);
+                                ampsText.setText(amps + " A");
+                                powerUsed.setText(power + " Watts");
+                                unitsConsumed.setText(energy + " KWh");
+                                amountGenerated.setText(cost + " Rs.");
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -177,6 +218,7 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> param = new HashMap<>();
+                        // TODO: Create id functinality here
                         return param;
                     }
                 };
@@ -191,6 +233,7 @@ public class HomeActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
             }
             return null;
         }
