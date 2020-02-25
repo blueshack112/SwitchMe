@@ -5,27 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarSize="4dp"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivityRelay3">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarSize="4dp"
-        tools:context=".HomeActivity">
+        tools:context=".HomeActivityRelay1">
 
         <TextView
-            android:id="@+id/time_passed_tv3"
+            android:id="@+id/time_passed_tv33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Total Units Consumed: "
             android:textColor="#AD1457"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv2" />
+            app:layout_constraintStart_toStartOf="@+id/linearLayout223"
+            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv23" />
 
         <TextView
-            android:id="@+id/time_passed_tv5"
+            android:id="@+id/time_passed_tv53"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -34,38 +34,38 @@
             android:textColor="#AD1457"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv3"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout223"
+            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv33"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/units_consumed_tv"
+            android:id="@+id/units_consumed_tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView"
             android:textColor="#21CA1B"
-            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv3"
-            app:layout_constraintEnd_toEndOf="@+id/power_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv33"
+            app:layout_constraintEnd_toEndOf="@+id/power_tv3"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/power_tv"
-            app:layout_constraintTop_toTopOf="@+id/time_passed_tv3" />
+            app:layout_constraintStart_toStartOf="@+id/power_tv3"
+            app:layout_constraintTop_toTopOf="@+id/time_passed_tv33" />
 
         <TextView
-            android:id="@+id/amount_generated_tv"
+            android:id="@+id/amount_generated_tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView"
             android:textColor="#21CA1B"
-            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv5"
-            app:layout_constraintEnd_toEndOf="@+id/power_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv53"
+            app:layout_constraintEnd_toEndOf="@+id/power_tv3"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/power_tv"
-            app:layout_constraintTop_toTopOf="@+id/time_passed_tv5" />
+            app:layout_constraintStart_toStartOf="@+id/power_tv3"
+            app:layout_constraintTop_toTopOf="@+id/time_passed_tv53" />
 
         <TextView
-            android:id="@+id/power_tv"
+            android:id="@+id/power_tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -73,37 +73,37 @@
             android:gravity="center"
             android:text="TextView"
             android:textColor="#21CA1B"
-            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv2"
+            app:layout_constraintBottom_toBottomOf="@+id/time_passed_tv23"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/time_passed_tv2"
-            app:layout_constraintTop_toTopOf="@+id/time_passed_tv2" />
+            app:layout_constraintStart_toEndOf="@+id/time_passed_tv23"
+            app:layout_constraintTop_toTopOf="@+id/time_passed_tv23" />
 
         <TextView
-            android:id="@+id/time_passed_tv"
+            android:id="@+id/time_passed_tv223"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Time Passed Since Turned On"
             android:textColor="#AD1457"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintEnd_toEndOf="@+id/textView423"
+            app:layout_constraintStart_toStartOf="@+id/textView423"
+            app:layout_constraintTop_toBottomOf="@+id/textView423" />
 
         <TextView
-            android:id="@+id/time_passed_tv2"
+            android:id="@+id/time_passed_tv23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Total Energy Used: "
             android:textColor="#AD1457"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintStart_toStartOf="@+id/linearLayout223"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout223" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView423"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -113,10 +113,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switcher_tb" />
+            app:layout_constraintTop_toBottomOf="@+id/switcher_tb23" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView823"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -126,10 +126,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/time_passed_tv223" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView223"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -140,10 +140,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView223" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView223"
             android:layout_width="287dp"
             android:layout_height="142dp"
             android:layout_marginTop="32dp"
@@ -153,27 +153,42 @@
             app:srcCompat="@drawable/logo_with_text" />
 
         <ToggleButton
-            android:id="@+id/switcher_tb"
+            android:id="@+id/switcher_tb23"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:layout_marginTop="24dp"
             android:text="ToggleButton"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/schedule_tb23"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView223"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/schedule_tb23"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginRight="43dp"
+            android:src="@drawable/clock_icon"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView223"
             app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayout223"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout23"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+            app:layout_constraintTop_toTopOf="@+id/linearLayout23">
 
             <FrameLayout
                 android:layout_width="wrap_content"
@@ -181,7 +196,7 @@
                 android:visibility="visible">
 
                 <ProgressBar
-                    android:id="@+id/volt_progress"
+                    android:id="@+id/volt_progress23"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
@@ -192,12 +207,12 @@
                     android:rotationX="0"
                     android:rotationY="0"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/time_passed_tv"
-                    app:layout_constraintStart_toStartOf="@+id/time_passed_tv"
-                    app:layout_constraintTop_toBottomOf="@+id/time_passed_tv" />
+                    app:layout_constraintEnd_toEndOf="@+id/time_passed_tv223"
+                    app:layout_constraintStart_toStartOf="@+id/time_passed_tv223"
+                    app:layout_constraintTop_toBottomOf="@+id/time_passed_tv223" />
 
                 <TextView
-                    android:id="@+id/volt_units_tv"
+                    android:id="@+id/volt_units_tv233"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:gravity="center"
@@ -207,7 +222,7 @@
             </FrameLayout>
 
             <TextView
-                android:id="@+id/volt_heading"
+                android:id="@+id/volt_heading23"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -215,13 +230,13 @@
                 android:text="Voltage"
                 android:textColor="#AD1457"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintEnd_toEndOf="@+id/textView423"
+                app:layout_constraintStart_toStartOf="@+id/textView423"
+                app:layout_constraintTop_toBottomOf="@+id/textView423" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linearLayout23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -229,16 +244,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.72"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/textView823">
 
             <FrameLayout
-                android:id="@+id/frameLayout"
+                android:id="@+id/frameLayout23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="visible">
 
                 <ProgressBar
-                    android:id="@+id/amp_progress"
+                    android:id="@+id/amp_progress23"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
@@ -247,12 +262,12 @@
                     android:progressDrawable="@drawable/circular_bar"
                     android:rotation="120"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/time_passed_tv"
-                    app:layout_constraintStart_toStartOf="@+id/time_passed_tv"
-                    app:layout_constraintTop_toBottomOf="@+id/time_passed_tv" />
+                    app:layout_constraintEnd_toEndOf="@+id/time_passed_tv223"
+                    app:layout_constraintStart_toStartOf="@+id/time_passed_tv223"
+                    app:layout_constraintTop_toBottomOf="@+id/time_passed_tv223" />
 
                 <TextView
-                    android:id="@+id/amp_units_tv"
+                    android:id="@+id/amp_units_tv23"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:gravity="center"
@@ -262,7 +277,7 @@
             </FrameLayout>
 
             <TextView
-                android:id="@+id/curr_heading"
+                android:id="@+id/curr_heading23"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -270,9 +285,9 @@
                 android:text="Current"
                 android:textColor="#AD1457"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintEnd_toEndOf="@+id/textView423"
+                app:layout_constraintStart_toStartOf="@+id/textView423"
+                app:layout_constraintTop_toBottomOf="@+id/textView423" />
 
         </LinearLayout>
 
